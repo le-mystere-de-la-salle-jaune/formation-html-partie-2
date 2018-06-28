@@ -3,6 +3,8 @@ package dev.pizzeria.controller;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import dev.pizzeria.service.Helpers;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -38,7 +40,8 @@ public class ClientController extends HttpServlet {
         LOGGER.info("Paramètre nom reçu " + nom);
 
 
-        // TODO insérer un nouveau client en base de données
+        // TODO insérer un nouveau client
+        Helpers.PIZZERIA_SERVICE.sauverClient(nom);
 
 
         try {
@@ -47,10 +50,12 @@ public class ClientController extends HttpServlet {
 
             // récupération du contenu du fichier template
             String template = Files.readAllLines(Paths.get(this.getClass().getClassLoader().getResource(TEMPLATE_CLIENT_INSERE).toURI())).stream().collect(Collectors.joining());
+            
+            String templateModifie = template.replace("{{nom}}", nom);
 
             // écriture dans le corps de la réponse
             PrintWriter writer = resp.getWriter();
-            writer.write(template);
+            writer.write(templateModifie);
 
         } catch (URISyntaxException e) {
            LOGGER.error("Fichier HTML non trouvé", e);
