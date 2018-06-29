@@ -16,4 +16,9 @@ public class PizzeriaService {
 		this.clients.put(client.getUuid(), client);
 	}
 	
+	public Map<UUID, Client> listerClients()
+	{
+		return this.clients;
+	}
+	
 }
