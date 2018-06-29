@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Liste des clients</title>
+</head>
+<body>
+    <h1>Gestion des clients</h1>
+    <nav>
+        <a href="ajouter_client.html">Ajout</a> /
+        <a href="index.html">Retour à l'accueil</a>
+    </nav>
+    <section>
+        <h2>List des clients</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th align="left">Id.</th>
+                    <th align="left">NOM</th>
+                    <th align="left">Prénom</th>
+                    <th align="left">Ville</th>
+                    <th align="right">Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{liste_clients}}
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="7"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+</body>
+</html>
