@@ -82,9 +82,9 @@ public class ClientController extends HttpServlet {
             StringBuilder sb = new StringBuilder();
             
             for(Client client : clients) {
-            	sb.append("<tr><td>"+client.getUuid()+"</td>"+"<td>"+client.getPrenom()+"<td>"+client.getNom()+"</td>"+"<td>"+client.getVille()+"</td>"+"<td>"+client.getAge()+"</td>+</tr>");
+            	sb.append("<tr><td>"+client.getUuid()+"</td><td>"+client.getPrenom()+"<td>"+client.getNom()+"</td><td>"+client.getVille()+"</td><td>"+client.getAge()+"</td></tr>");
             }
-            String templateModifie = template.replace("client", sb.toString());
+            String templateModifie = template.replace("{{client}}", sb.toString());
             // écriture dans le corps de la réponse
             PrintWriter writer = resp.getWriter();
             writer.write(templateModifie);

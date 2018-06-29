@@ -20,7 +20,7 @@ Tester l'URL : `http://localhost:8080/ajouter_client.html`.
 
 * Itération 2 : Afficher la liste des clients. DONE
 
-* Itération 2 BIS : Connexion à la base de données
+* Itération 2 BIS : Connexion à la base de données DONE
 
 * Itération 3 : Ajouter une pizza (pour la photo nous stockons uniquement l'URL, sans upload de fichier).
 
