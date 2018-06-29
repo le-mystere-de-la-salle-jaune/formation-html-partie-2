@@ -1,14 +1,16 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Title</title>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 	 crossorigin="anonymous">
-	<title>Client Inséré</title>
+
 </head>
 
 <body>
@@ -36,16 +38,25 @@
 				<a href="livreurs" class="nav-link">Liste des livreurs</a>
 			</li>
 		</ul>
-    </nav>
-<section>
-	<p>
-		{{msg_statut}}
-	</p>
-
-	<br>
-	<br>
-	<a href="javascript:window.history.back();">Retour</a>
+	</nav>
+	<section>
+		<table class="table table-striped">
+			<thead class="thead-dark">
+				<tr>
+					<th scope="col">Id.</th>
+					<th scope="col">Nom</th>
+					<th scope="col">Prenom</th>
+					<th scope="col">Ville</th>
+					<th scope="col">Age</th>
+				</tr>
+			</thead>
+			<tbody>{{liste_client}}
+			</tbody>
+		</table>
+		<a href="javascript:window.history.back();">Retour</a>
+		<a href="clients"></a>
 	</section>
+
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
