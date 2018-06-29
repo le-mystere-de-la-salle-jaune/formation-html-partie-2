@@ -5,14 +5,25 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Test</title>
+    <title>Ajouter un client</title>
 </head>
 <body>
-	<h1>Ajouter Client</h1>
+	<h1>Gestion des clients</h1>
+	
+	<h2>Création d'un client</h2>
 	
 	<form action="/clients" method="post">
-		<input name="nom">
-		<input type="submit">
+		<label>Nom </label><input type="text" name="nom"/><br>
+		<label>Prénom </label><input type="text" name="prenom"/><br>
+		<label>Ville </label><input type="text" name="ville"/><br>
+		<label>Age </label><input type="text" name="age"/><br>
+		<input type="submit" value="Ajouter"/>
+		
+		<p>L'insertion a été correctement effectuée<br>
+		<a href="/accueil.html">Retour</a><br></p>
+		
+		<p>L'insertion a échoué<br>
+		<a href="/accueil.html">Retour</a></p>
 	</form>
 </body>
 </html>

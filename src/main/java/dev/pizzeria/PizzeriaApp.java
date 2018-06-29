@@ -1,6 +1,8 @@
 package dev.pizzeria;
 
 import dev.pizzeria.controller.ClientController;
+import dev.pizzeria.controller.PizzaController;
+
 import org.eclipse.jetty.server.Connector;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.ServerConnector;
@@ -30,6 +32,9 @@ public class PizzeriaApp {
 
         // ClientController prend la main pour les requêtes /clients
         context.addServlet(ClientController.class, "/clients");
+        
+     // PizzaController prend la main pour les requêtes /pizzas
+        context.addServlet(PizzaController.class, "/pizzas");
 
 
         server.setHandler(context);
