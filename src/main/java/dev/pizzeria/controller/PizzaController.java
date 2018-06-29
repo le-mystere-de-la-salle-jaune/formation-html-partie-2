@@ -48,7 +48,7 @@ public class PizzaController extends AbstractController{
 			String templateModifie = template.replace("{{label}}", label);
 			templateModifie = templateModifie.replace("{{refference}}", refference.toUpperCase());
 			templateModifie = templateModifie.replace("{{price}}", price+"");
-			templateModifie = templateModifie.replace("{{imageURL}}", "<img src=\""+imageUrl+"\" alt=\""+label+"\">");
+			templateModifie = templateModifie.replace("{{imageURL}}", "<img src=\""+imageUrl+"\" alt=\""+label+"\"width=\"200\">");
 
 			// écriture dans le corps de la réponse
 			PrintWriter writer = resp.getWriter();
@@ -70,7 +70,7 @@ public class PizzaController extends AbstractController{
 			tempTable += "<td>"+p.getLabel()+"</td>";
 			tempTable += "<td>"+p.getRefference()+"</td>";
 			tempTable += "<td>"+p.getPrice()+"</td>";
-			tempTable += "<td>"+p.getImageUrl()+"</td>";
+			tempTable += "<td>"+"<img src=\""+p.getImageUrl()+"\" alt=\""+p.getLabel()+"\" width=\"200\">"+"</td>";
 
 			tempTable += "</tr>";
 		}
