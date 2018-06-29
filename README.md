@@ -10,25 +10,25 @@ Le contenu du répertoire `src/main/webapp/static` est automatiquement exposé.
 
 Tester l'URL : `http://localhost:8080/images/4fromages.jpg`.
 
-Tester l'URL : `http://localhost:8080/test.html`.
+Tester l'URL : `http://localhost:8080/ajouter_client.html`.
 
 
 
 # Fonctionnalités attendues :
 
-* Itération 1 : Ajouter un client. Nom de la branche `prenom-it-1-ajouter-client`.
+* Itération 1 : Ajouter un client.
 
-* Itération 2 : Afficher la liste des clients. Nom de la branche `prenom-it-2-lister-client`.
+* Itération 2 : Afficher la liste des clients.
 
-* Itération 3 : Ajouter une pizza. Nom de la branche `prenom-it-3-ajouter-pizza`.
+* Itération 3 : Ajouter une pizza (pour la photo nous stockons uniquement l'URL, sans upload de fichier).
 
-* Itération 4 : Afficher la liste des pizzas. Nom de la branche `prenom-it-4-lister-pizzas`.
+* Itération 4 : Afficher la liste des pizzas.
 
-* Itération 5 : Ajouter un livreur. Nom de la branche `prenom-it-5-ajouter-livreur`.
+* Itération 5 : Ajouter un livreur.
 
-* Itération 6 : Afficher la liste des livreurs. Nom de la branche `prenom-it-6-lister-livreurs`.
+* Itération 6 : Afficher la liste des livreurs.
 
-* Itération 7 : Ajouter une commande. Nom de la branche `prenom-it-7-ajouter-commande`.
+* Itération 7 : Ajouter une commande.
 
-* Itération 8 :Afficher la liste des commandes. Nom de la branche `prenom-it-8-lister-commandes`.
+* Itération 8 :Afficher la liste des commandes.
 
