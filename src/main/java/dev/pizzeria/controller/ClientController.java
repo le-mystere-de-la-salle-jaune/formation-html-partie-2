@@ -19,46 +19,53 @@ import java.util.stream.Collectors;
 /**
  * Contrôleur responsable du traitement de la réquête : POST /clients.
  */
+@SuppressWarnings("serial")
 public class ClientController extends HttpServlet {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(ClientController.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(ClientController.class);
 
-    /**
-     * Page HTML de la réponse en cas d'insertion effectuée.
-     * Fichier présent dans le répertoire src/main/resources.
-     */
-    public static final String TEMPLATE_CLIENT_INSERE = "templates/client_insere.html";
+	/**
+	 * Page HTML de la réponse en cas d'insertion effectuée. Fichier présent
+	 * dans le répertoire src/main/resources.
+	 */
+	public static final String TEMPLATE_CLIENT_INSERE = "templates/client_insere.html";
 
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+		// récupération du paramètre {truc}
+		// <input name="truc">
+		String nom = req.getParameter("nom");
+		String prenom = req.getParameter("prenom");
+		String ville = req.getParameter("ville");
+		Integer age = Integer.valueOf(req.getParameter("age"));
 
-        // récupération du paramètre nom
-        // <input name="nom">
-        String nom = req.getParameter("nom");
-        
-        LOGGER.info("Paramètre nom reçu " + nom);
+		LOGGER.info("Paramètre nom reçu " + nom);
+		LOGGER.info("Paramètre prénom reçu " + prenom);
+		LOGGER.info("Paramètre ville reçu " + ville);
+		LOGGER.info("Paramètre âge reçu " + age);
 
+		// TODO insérer un nouveau client
+		Helpers.PIZZERIA_SERVICE.sauverClient(nom, prenom, ville, age);
 
-        // TODO insérer un nouveau client
-        Helpers.PIZZERIA_SERVICE.sauverClient(nom);
+		try {
+			// réponse au format UTF-8 pour le support des accents
+			resp.setCharacterEncoding("UTF-8");
 
+			// récupération du contenu du fichier template
+			String template = Files
+					.readAllLines(
+							Paths.get(this.getClass().getClassLoader().getResource(TEMPLATE_CLIENT_INSERE).toURI()))
+					.stream().collect(Collectors.joining());
 
-        try {
-            // réponse au format UTF-8 pour le support des accents
-            resp.setCharacterEncoding("UTF-8");
+			String templateModifie = template.replace("{{nom}}", nom);
 
-            // récupération du contenu du fichier template
-            String template = Files.readAllLines(Paths.get(this.getClass().getClassLoader().getResource(TEMPLATE_CLIENT_INSERE).toURI())).stream().collect(Collectors.joining());
-            
-            String templateModifie = template.replace("{{nom}}", nom);
+			// écriture dans le corps de la réponse
+			PrintWriter writer = resp.getWriter();
+			writer.write(templateModifie);
 
-            // écriture dans le corps de la réponse
-            PrintWriter writer = resp.getWriter();
-            writer.write(templateModifie);
-
-        } catch (URISyntaxException e) {
-           LOGGER.error("Fichier HTML non trouvé", e);
-        }
-    }
+		} catch (URISyntaxException e) {
+			LOGGER.error("Fichier HTML non trouvé", e);
+		}
+	}
 }
