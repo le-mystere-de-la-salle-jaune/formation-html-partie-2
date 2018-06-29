@@ -6,6 +6,7 @@ import java.util.Map;
 import java.util.UUID;
 
 import dev.pizzeria.domain.Client;
+import dev.pizzeria.domain.Livreur;
 import dev.pizzeria.domain.Pizza;
 
 public class PizzeriaService implements IPizzeriaService {
@@ -45,6 +46,12 @@ public class PizzeriaService implements IPizzeriaService {
 	public List<Pizza> findAllPizza() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public void saveNewLivreur(Livreur livreur) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }

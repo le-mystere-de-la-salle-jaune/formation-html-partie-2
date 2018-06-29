@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import dev.pizzeria.domain.Client;
+import dev.pizzeria.domain.Livreur;
 import dev.pizzeria.domain.Pizza;
 
 public interface IPizzeriaService {
@@ -16,4 +17,5 @@ public interface IPizzeriaService {
 	public List<Client> findAllClients();
 	public void saveNewPizza(Pizza pizza);
 	public List<Pizza> findAllPizza();
+	public void saveNewLivreur(Livreur livreur);
 }
