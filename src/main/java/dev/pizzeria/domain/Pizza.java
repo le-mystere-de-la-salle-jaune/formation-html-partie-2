@@ -8,20 +8,20 @@ public class Pizza
 	private String libelle;
 	private String reference;
 	private double prix;
-	private String urlImage;
+	private String url;
 	
 	public Pizza()
 	{
 		
 	}
 	
-	public Pizza(UUID pUuid, String pLibelle, String pReference, double pPrix, String pUrlImage)
+	public Pizza(UUID pUuid, String pLibelle, String pReference, double pPrix, String pUrl)
 	{
 		this.uuid = pUuid;
 		this.libelle = pLibelle;
 		this.reference = pReference;
 		this.prix = pPrix;
-		this.urlImage = pUrlImage;
+		this.url = pUrl;
 	}
 
 	public UUID getUuid() {
@@ -57,11 +57,11 @@ public class Pizza
 	}
 
 	public String getUrlImage() {
-		return urlImage;
+		return url;
 	}
 
-	public void setUrlImage(String urlImage) {
-		this.urlImage = urlImage;
+	public void setUrlImage(String url) {
+		this.url = url;
 	}
 	
 	

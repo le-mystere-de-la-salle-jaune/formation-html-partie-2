@@ -30,6 +30,7 @@ public class PizzeriaApp {
 
         // ClientController prend la main pour les requêtes /clients
         context.addServlet(ClientController.class, "/clients");
+        context.addServlet(ClientController.class, "/pizzas");
 
 
         server.setHandler(context);
