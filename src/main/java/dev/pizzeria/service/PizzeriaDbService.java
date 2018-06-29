@@ -57,5 +57,10 @@ public class PizzeriaDbService implements IPizzeriaService {
 
 	}
 
+	@Override
+	public List<Pizza> findAllPizza() {
+		return (ArrayList<Pizza>) jpaDb.selectFromDb(Pizza.class,null);
+	}
+
 
 }

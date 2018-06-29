@@ -40,5 +40,11 @@ public class PizzeriaService implements IPizzeriaService {
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public List<Pizza> findAllPizza() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 }

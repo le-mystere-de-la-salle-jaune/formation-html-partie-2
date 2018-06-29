@@ -1,5 +1,6 @@
 package dev.pizzeria.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import dev.pizzeria.domain.Client;
@@ -14,4 +15,5 @@ public interface IPizzeriaService {
 	public boolean clientExists(int idClient);
 	public List<Client> findAllClients();
 	public void saveNewPizza(Pizza pizza);
+	public List<Pizza> findAllPizza();
 }
