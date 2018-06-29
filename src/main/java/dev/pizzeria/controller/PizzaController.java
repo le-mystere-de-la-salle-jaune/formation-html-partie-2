@@ -26,7 +26,7 @@ public class PizzaController extends HttpServlet
 	private static final Logger LOGGER = LoggerFactory.getLogger(PizzaController.class);
 	
 	public static final String TEMPLATE_PIZZA_INSERE = "templates/pizza_insere.html";
-    public static final String TEMPLATE_LISTE_PIZZA = "templates/liste_pizzas.html";   
+    public static final String TEMPLATE_LISTE_PIZZA = "templates/liste_pizza.html";   
     public static final String TEMPLATE_UNE_PIZZA = "templates/ligne_une_pizza.html";
     
     @Override
@@ -110,11 +110,11 @@ public class PizzaController extends HttpServlet
               
             }
             
-            String templateListeClient = Files.readAllLines(Paths.get(this.getClass().getClassLoader().getResource(TEMPLATE_LISTE_PIZZA).toURI())).stream().collect(Collectors.joining());
+            String templateListePizza = Files.readAllLines(Paths.get(this.getClass().getClassLoader().getResource(TEMPLATE_LISTE_PIZZA).toURI())).stream().collect(Collectors.joining());
             
             
             PrintWriter writer = resp.getWriter();
-            writer.write(templateListeClient.replace("{{listePizzas}}",sb.toString()));
+            writer.write(templateListePizza.replace("{{listePizzas}}",sb.toString()));
            
 
         } catch (URISyntaxException e) {

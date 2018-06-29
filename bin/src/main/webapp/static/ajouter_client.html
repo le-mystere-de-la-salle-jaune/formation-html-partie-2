@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport"
+	          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	    <title>Test</title>
+	</head>
+	
+	<body>
+		
+		<header align="center"><h1>La pizzeria Florentina !</h1></header>
+		
+		<nav></nav>
+		
+		<section border=1>
+			<form action="/clients" method="post">
+					
+						<h3>Gestion des clients</h3>
+						<h4>Création d'un client</h4>
+					
+						<label>Nom</label>
+						<input type ="text" name="nom" id ="nom"><br />
+						<label>Prenom</label>
+						<input type ="text" name="prenom" id ="prenom"><br />
+						<label>Ville</label>
+						<input type ="text" name="ville" id ="ville"><br />
+						<label>Age</label>
+						<input type ="text" name="age" id ="age"><br />
+						<input type="submit" value="Ajouter">
+						<input type="reset" value="Annuler">
+						
+						<h4>L'insertion a été correctement effectuée</h4>
+						<a href="">Retour</a>
+						
+						<h4>L'insertion a échouée</h4>
+						<a href="">Retour</a>
+						
+						<h4>Liste client</h4>
+						<a href="/clients">liste</a>				
+			</form>
+		</section>
+		
+		<footer></footer>
+		
+	</body>
+</html>
