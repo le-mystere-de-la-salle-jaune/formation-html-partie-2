@@ -10,30 +10,28 @@ import org.eclipse.jetty.servlet.ServletHolder;
 
 public class PizzeriaApp {
 
-    public static void main(String[] args) throws Exception {
+	public static void main(String[] args) throws Exception {
 
-        Server server = new Server();
+		Server server = new Server();
 
-        ServerConnector connector = new ServerConnector(server);
-        connector.setPort(8080);
-        server.setConnectors(new Connector[] { connector });
-        ServletContextHandler context = new ServletContextHandler();
-        context.setContextPath("/");
+		ServerConnector connector = new ServerConnector(server);
+		connector.setPort(8080);
+		server.setConnectors(new Connector[] { connector });
+		ServletContextHandler context = new ServletContextHandler();
+		context.setContextPath("/");
 
-        DefaultServlet defaultServlet = new DefaultServlet();
-        ServletHolder holderPwd = new ServletHolder("default", defaultServlet);
-        holderPwd.setInitParameter("resourceBase", "./src/main/webapp/static");
-        context.addServlet(holderPwd, "/*");
+		DefaultServlet defaultServlet = new DefaultServlet();
+		ServletHolder holderPwd = new ServletHolder("default", defaultServlet);
+		holderPwd.setInitParameter("resourceBase", "./src/main/webapp/static");
+		context.addServlet(holderPwd, "/*");
 
+		// Les contrôleurs de l'application
 
-        // Les contrôleurs de l'application
+		// ClientController prend la main pour les requêtes /clients
+		context.addServlet(ClientController.class, "/clients");
 
-        // ClientController prend la main pour les requêtes /clients
-        context.addServlet(ClientController.class, "/clients");
-
-
-        server.setHandler(context);
-        server.start();
-        server.join();
-    }
+		server.setHandler(context);
+		server.start();
+		server.join();
+	}
 }
