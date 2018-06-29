@@ -10,9 +10,18 @@ public class PizzeriaService {
 	
 	Map<UUID, Client> clients = new HashMap<>();
 
-	public void sauverClient(String nom) {
-		Client client = new Client(UUID.randomUUID(), nom);
+	public void sauverClient(String nom, String prenom, String ville, int age) {
+		Client client = new Client(UUID.randomUUID(), nom, prenom, ville, age);
 		this.clients.put(client.getUuid(), client);
 	}
+
+	/**
+	 * @return the clients
+	 */
+	public Map<UUID, Client> getClients() {
+		return clients;
+	}
+	
+	
 	
 }
