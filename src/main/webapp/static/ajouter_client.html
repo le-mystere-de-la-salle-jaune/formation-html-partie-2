@@ -1,18 +1,43 @@
 <!doctype html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Test</title>
+<meta charset="UTF-8">
+<meta name="viewport"
+	content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Test</title>
 </head>
 <body>
 	<h1>Ajouter Client</h1>
-	
+
 	<form action="/clients" method="post">
-		<input name="nom">
-		<input type="submit">
+		<table>
+			<tr>
+				<td>Nom</td>
+				<td><input name="nom"></td>
+			</tr>
+			<tr>
+				<td>Prénom</td>
+				<td><input name="prenom"></td>
+			</tr>
+			<tr>
+				<td>Ville</td>
+				<td><input name="ville"></td>
+			</tr>
+			<tr>
+				<td>Age</td>
+				<td><input name="age"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td> <input type="submit"></td>
+			</tr>
+		</table>
+		
+
 	</form>
+
+	<h1>Liste des clients</h1>
+	Pour visualiser la liste des clients, veuillez cliquer <a href="http://localhost:8080/clients">ici</a>.
 </body>
 </html>
