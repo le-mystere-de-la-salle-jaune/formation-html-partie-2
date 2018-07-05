@@ -15,24 +15,30 @@
 		<nav></nav>
 		
 		<section border=1>
-			<form action="/clients" method="post">
+			<form action="/livreurs" method="post">
 					
-						<h3>Gestion des clients</h3>
-						<h4>Création d'un client</h4>
+						<h3>Gestion des livreurs</h3>
+						<h4>Création d'un livreur</h4>
 					
 						<label>Nom</label>
 						<input type ="text" name="nom" id ="nom"><br />
-						<label>Prenom</label>
+						<label>Prénom</label>
 						<input type ="text" name="prenom" id ="prenom"><br />
-						<label>Ville</label>
-						<input type ="text" name="ville" id ="ville"><br />
-						<label>Age</label>
-						<input type ="text" name="age" id ="age"><br />
+						<label>Téléphone (XX.XX.XX.XX.XX)</label>
+						<input type ="prix" name="telephone" id ="telephone"><br />
+						<label>Date d'embauche (JJ/MM/AAAA)</label>
+						<input type ="text" name="dateEmbauche" id ="dateEmbauche"><br />
 						<input type="submit" value="Ajouter">
 						<input type="reset" value="Annuler">
-
-						<h4>Liste client</h4>
-						<a href="/clients">liste</a>				
+						
+						<h4>L'insertion a été correctement effectuée</h4>
+						<a href="">Retour</a>
+						
+						<h4>L'insertion a échouée</h4>
+						<a href="">Retour</a>
+						
+						<h4>Liste livreur</h4>
+						<a href="/livreurs">liste</a>				
 			</form>
 		</section>
 		

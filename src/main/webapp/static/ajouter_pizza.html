@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport"
+	          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	    <title>Test</title>
+	</head>
+	
+	<body>
+		
+		<header align="center"><h1>La pizzeria Florentina !</h1></header>
+		
+		<nav></nav>
+		
+		<section border=1>
+			<form action="/pizzas" method="post">
+					
+						<h3>Gestion des pizzas</h3>
+						<h4>Création d'une pizza</h4>
+					
+						<label>Libelle</label>
+						<input type ="text" name="libelle" id ="libelle"><br />
+						<label>Référence</label>
+						<input type ="text" name="reference" id ="reference"><br />
+						<label>Prix</label>
+						<input type ="prix" name="prix" id ="prix"><br />
+						<label>Url</label>
+						<input type ="text" name="url" id ="url"><br />
+						<input type="submit" value="Ajouter">
+						<input type="reset" value="Annuler">
+						
+						<h4>L'insertion a été correctement effectuée</h4>
+						<a href="">Retour</a>
+						
+						<h4>L'insertion a échouée</h4>
+						<a href="">Retour</a>
+						
+						<h4>Liste pizza</h4>
+						<a href="/pizzas">liste</a>				
+			</form>
+		</section>
+		
+		<footer></footer>
+		
+	</body>
+</html>
