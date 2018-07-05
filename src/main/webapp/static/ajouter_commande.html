@@ -15,24 +15,22 @@
 		<nav></nav>
 		
 		<section border=1>
-			<form action="/clients" method="post">
+			<form action="/commandes" method="post">
 					
-						<h3>Gestion des clients</h3>
-						<h4>Création d'un client</h4>
+						<h3>Gestion des commandes</h3>
+						<h4>Création d'une commande</h4>
 					
-						<label>Nom</label>
-						<input type ="text" name="nom" id ="nom"><br />
-						<label>Prenom</label>
-						<input type ="text" name="prenom" id ="prenom"><br />
-						<label>Ville</label>
-						<input type ="text" name="ville" id ="ville"><br />
-						<label>Age</label>
-						<input type ="text" name="age" id ="age"><br />
+						<label>Client (nom prénom)</label>
+						<input type ="text" name="nomClient" id ="nomClient"><input type ="text" name="prenomClient" id ="prenomClient"><br />
+						<label>Livreur (nom prénom)</label>
+						<input type ="text" name="nomLivreur" id ="nomLivreur"><input type ="text" name="prenomLivreur" id ="prenomLivreur"><br />
+						
 						<input type="submit" value="Ajouter">
 						<input type="reset" value="Annuler">
-
-						<h4>Liste client</h4>
-						<a href="/clients">liste</a>				
+						
+						
+						<h4>Liste commandes</h4>
+						<a href="/commandes">liste</a>				
 			</form>
 		</section>
 		

@@ -35,6 +35,7 @@ public class ClientController extends HttpServlet {
     public static final String TEMPLATE_CLIENT_INSERE = "templates/client_insere.html";
     public static final String TEMPLATE_LISTE_CLIENT = "templates/liste_client.html";   
     public static final String TEMPLATE_UN_CLIENT = "templates/ligne_un_client.html";
+    public static final String TEMPLATE_ERROR = "templates/erreur_insertion.html";
     
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -125,6 +126,7 @@ public class ClientController extends HttpServlet {
 
         } catch (URISyntaxException e) {
            LOGGER.error("Fichier HTML non trouvé", e);
+           
         }
 	}
     
