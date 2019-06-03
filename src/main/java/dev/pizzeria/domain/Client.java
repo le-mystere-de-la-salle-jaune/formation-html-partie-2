@@ -2,11 +2,33 @@ package dev.pizzeria.domain;
 
 import java.util.UUID;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="CLIENT")
 public class Client {
 	
-	private UUID uuid;
-	private String nom;
+	//private UUID uuid;
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int id;
 	
+	@Column(name="FIRSTNAME")
+	private String firstName;
+	
+	@Column(name="LASTNAME")
+	private String lastName;
+	
+	@Column(name="CITY")
+	private String city;
+	
+	@Column(name="AGE")
+	private int age;
 
 
 
@@ -14,30 +36,56 @@ public class Client {
 		super();
 	}
 
-	
-
-	public Client(UUID uuid, String nom) {
+	public Client(String nom, String prenom, String ville, int age) {
 		super();
-		this.uuid = uuid;
-		this.nom = nom;
+		//this.uuid = uuid;
+		this.firstName = prenom;
+		lastName = nom;
+		city = ville;
+		this.age = age;
 	}
 	
-	public UUID getUuid() {
-		return uuid;
+	public int getId() {
+		return id;
 	}
 
-	public void setUuid(UUID uuid) {
-		this.uuid = uuid;
+	public void setId(int uuid) {
+		this.id = uuid;
 	}
 
-	public String getNom() {
-		return nom;
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setNom(String nom) {
-		this.nom = nom;
+	public void setFirstName(String nom) {
+		this.firstName = nom;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
 	}
 	
+
 	
 
 }
